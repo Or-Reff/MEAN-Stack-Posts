@@ -8,5 +8,6 @@ if (environment.production) {
   enableProdMode();
 }
 
+// mainly this line will execute first on Angular
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
