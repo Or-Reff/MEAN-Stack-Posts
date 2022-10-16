@@ -1,23 +1,23 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { PostService } from '../posts.service';
 
 @Component({
   selector: 'app-post-create',
   templateUrl: './post-create.component.html',
   styleUrls: ['./post-create.component.scss'],
 })
+@Injectable({ providedIn: 'root' })
 export class PostCreateComponent implements OnInit {
   enteredTitle = '';
   enteredContent = '';
-  @Output() postCreated = new EventEmitter();
-  constructor() {}
+
+  constructor(public postsService: PostService) {}
 
   ngOnInit(): void {}
 
-  onAddPost() {
-    const post = {
-      title: this.enteredTitle,
-      content: this.enteredContent,
-    };
-    this.postCreated.emit(post);
+  onAddPost(form: NgForm) {
+    if (form.invalid) return; // tried to submit but shows it red
+    this.postsService.addPost(form.value.title, form.value.content);
   }
 }

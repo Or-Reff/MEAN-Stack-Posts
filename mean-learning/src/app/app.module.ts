@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { PostService } from './components/posts/posts.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatButtonModule,
     MatExpansionModule,
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
