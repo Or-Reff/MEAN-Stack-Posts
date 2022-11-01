@@ -9,11 +9,6 @@ import { Subscription } from 'rxjs';
 })
 @Injectable({ providedIn: 'root' })
 export class PostListComponent implements OnInit, OnDestroy {
-  // posts = [
-  //   { title: 'First Post', content: "First post's content" },
-  //   { title: 'Second Post', content: "Second post's content" },
-  //   { title: 'Third Post', content: "Third post's content" },
-  // ];
   posts: Post[] = [];
   postsSub: Subscription;
   constructor(public postsService: PostService) {}

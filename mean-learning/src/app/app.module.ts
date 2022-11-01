@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { PostService } from './components/posts/posts.service';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { PostService } from './components/posts/posts.service';
     MatCardModule,
     MatButtonModule,
     MatExpansionModule,
+    MatToolbarModule,
   ],
   providers: [PostService],
   bootstrap: [AppComponent]

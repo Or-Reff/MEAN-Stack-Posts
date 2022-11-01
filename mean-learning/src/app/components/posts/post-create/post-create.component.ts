@@ -17,7 +17,12 @@ export class PostCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   onAddPost(form: NgForm) {
-    if (form.invalid) return; // tried to submit but shows it red
+    if (form.invalid) return; // tried to submit but shows it invalid(red warning)
     this.postsService.addPost(form.value.title, form.value.content);
+    form.reset();
+    // *TODO : Add if statement when to reset red warning
+    Object.keys(form.controls).forEach(key =>{
+      form.controls[key].setErrors(null)
+   });
   }
 }
