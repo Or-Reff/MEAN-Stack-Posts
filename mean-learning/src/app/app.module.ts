@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PostService } from './components/posts/posts.service';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { PostService } from './components/posts/posts.service';
     MatButtonModule,
     MatExpansionModule,
     MatToolbarModule,
+    HttpClientModule, 
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
