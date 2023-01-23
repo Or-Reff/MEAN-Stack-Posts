@@ -7,9 +7,9 @@ import { PostCreateComponent } from './components/posts/post-create/post-create.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { PostListComponent } from './components/posts/post-list/post-list.component';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import {  MatInputModule } from '@angular/material/input';
+import {  MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PostService } from './components/posts/posts.service';
@@ -27,12 +27,12 @@ import { HttpClientModule } from "@angular/common/http";
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatInputModule,
-    MatCardModule,
-    MatButtonModule,
     MatExpansionModule,
     MatToolbarModule,
     HttpClientModule, 
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
