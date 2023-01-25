@@ -1,5 +1,5 @@
 import { Component, Injectable, Input, OnDestroy, OnInit } from '@angular/core';
-import { Post } from '../post.model';
+import { Post } from '../models/post.model';
 import { PostService } from '../posts.service';
 import { Subscription } from 'rxjs';
 @Component({
